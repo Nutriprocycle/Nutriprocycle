@@ -124,6 +124,8 @@
                             <p class="mb-2">Gg Buntu No. 0</p>
                             <p class="mb-0">Saranjana, Wakanda</p>
                         </div>
+                     </div>
+                </div>
             </div>
           <div class="row g-5">
     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -251,25 +253,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-            <script>
-    function sendMessage() {
-        // Ambil nilai dari input
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const subject = document.getElementById("subject").value;
-        const message = document.getElementById("message").value;
-
-        // Buat URL WhatsApp dengan template
-        const whatsappNumber = "6285183193599"; // Nomor WhatsApp Anda
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-            `Halo, saya ${name}.\nEmail: ${email}\nSubjek: ${subject}\nPesan:\n${message}`
-        )}`;
-
-        // Buka WhatsApp
-        window.open(whatsappUrl, "_blank");
-    }
-</script>
-
 </body>
 
 </html>
