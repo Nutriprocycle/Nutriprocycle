@@ -103,7 +103,7 @@
                                 <div class="col-lg-7 text-center">
                                     <p class="fs-4 text-white animated zoomIn">Selamat Datang di <strong class="text-dark">NUTRIPROCYCLE</strong></p>
                                     <h1 class="display-1 text-dark mb-4 animated zoomIn">produk kesehatan organik dari limbah buah dan sayur</h1>
-                                    <a href="" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Jelajahi Selengkapnya</a>
+                                    <a href="#about-section" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Jelajahi Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div id="about-section" class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6">
@@ -627,14 +627,58 @@
                             <p class="mb-0">Saranjana, Wakanda</p>
                         </div>
                     </div>
+       <div class="row g-5">
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <h3 class="mb-4">Hubungi Kami</h3>
+        <p class="mb-4">Apakah Anda memiliki pertanyaan, umpan balik, atau ingin mengetahui lebih banyak tentang produk ramah lingkungan dan keberlanjutan kami? Jangan ragu untuk menghubungi tim NutriProCycle. Kami siap membantu Anda menciptakan gaya hidup sehat dan peduli lingkungan!</p>
+        <form id="contactForm">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        <label for="name">Nama</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                        <label for="subject">alamat</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 120px"></textarea>
+                        <label for="message">Pesan</label>
+                        <br>
+                    </div>
+                <br> 
+                <div class="col-12">
+                    <button class="btn btn-primary rounded-pill py-3 px-5" type="button" onclick="sendMessage()">Kirim Pesan</button>
+                </div>
+            </div>
+        </form>
+             </div>
+         </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <iframe class="w-100 rounded"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6151.445339906578!2d112.73082146018346!3d-7.322876440923451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb6c094d1b87%3A0xbc3def4f4bd2fa7!2sUniversitas%20Islam%20Negeri%20Sunan%20Ampel%20Surabaya!5e0!3m2!1sid!2sid!4v1732192915758!5m2!1sid!2sid"
+                        frameborder="0" style="height: 100%; min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact Start -->
-
-
-    <!-- Footer Start -->
+    <!-- Contact End -->
+    
+ <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -700,6 +744,24 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+    function sendMessage() {
+        // Ambil nilai dari input
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        // Buat URL WhatsApp dengan template
+        const whatsappNumber = "6285183193599"; // Nomor WhatsApp Anda
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+            `Halo, saya ${name}.\nEmail: ${email}\nAlamat: ${subject}\nPesan:\n${message}`
+        )}`;
+
+        // Buka WhatsApp
+        window.open(whatsappUrl, "_blank");
+    }
+</script>
 
 </body>
 
